@@ -9,8 +9,10 @@
 	import elements.ScoreBoard;
 	import flash.utils.Timer;
 	import flash.events.TimerEvent;
+	import Main;
 	
-	public class GameMain extends MovieClip {		
+	public class GameMain extends MovieClip 
+	{		
 		
 		//マウスの座標取得
 		private var mouse_x:int;
@@ -34,6 +36,9 @@
 		
 		//ウェイトタイマー（エンドレスモード用に切り分けできるようにする）
 		var timer:Timer = new Timer(20000,1);
+		
+		//メイン
+		private var mainPage:Main = new Main();
 		
 		public function GameMain() {
 			// constructor code
@@ -76,8 +81,11 @@
 			stage.addEventListener(MouseEvent.MOUSE_DOWN, taget_MouseDOWN_EventHandler);
 			
 			//タイマーのスタート
-			timer.start();
-			timer.addEventListener(TimerEvent.TIMER, timer_EventHandler);
+			if (mainPage.difficulty == 0)
+			{
+				timer.start();
+				timer.addEventListener(TimerEvent.TIMER, timer_EventHandler);
+			}
 			
 			//ここで回す
 			addEventListener(Event.ENTER_FRAME, GameEnterFrame_EventHandler);
