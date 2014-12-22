@@ -23,7 +23,7 @@
 		public var move_Y:int;
 		
 		//ターゲットのイージング
-		public var friction:Number = 0.3;
+		public var friction:Number = 0.2;
 		
 		//ターゲットの最低移動距離
 		public var MoveUnder:int = 50;
