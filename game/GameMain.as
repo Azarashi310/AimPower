@@ -136,6 +136,8 @@
 			removeEventListener(Event.ENTER_FRAME, GameEnterFrame_EventHandler);
 			//時間の表示を止める
 			removeEventListener(TimerEvent.TIMER, showTimer_EventHandler);
+			//マウスダウンを消す
+			removeEventListener(MouseEvent.MOUSE_DOWN, taget_MouseDOWN_EventHandler);
 			//スコアを渡す
 			var scoreArray:Array = [missPoint, goodPoint, nicePoint, marvellousPoint, perfectPoint];
 			mainPage.setScore(scoreArray);
