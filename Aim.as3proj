@@ -52,7 +52,7 @@
   </includeLibraries>
   <!-- SWC Libraries -->
   <libraryPaths>
-    <!-- example: <element path="..." /> -->
+    <element path="Tween24_2.0.1.swc" />
   </libraryPaths>
   <!-- External Libraries -->
   <externalLibraryPaths>

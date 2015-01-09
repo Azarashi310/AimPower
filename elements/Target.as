@@ -22,11 +22,15 @@
 		public var move_X:int;
 		public var move_Y:int;
 		
-		//ターゲットのイージング
-		public var friction:Number = 0.2;
+		//ターゲットの移動範囲内
+		public var MoveArea_X:int = 450;
+		public var MoveArea_Y:int = 300;
 		
 		//ターゲットの最低移動距離
 		public var MoveUnder:int = 50;
+		
+		//ターゲットのイージング
+		public var easying:Number = 0.01;
 		
 		public function Target() {
 			// constructor code
